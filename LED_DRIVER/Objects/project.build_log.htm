@@ -1,0 +1,200 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abdulsamet Aybaz, -, LIC=P6F5U-S0KKH-NTB3G-VWQFF-83HTI-J5M5C
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\abdul\OneDrive\Desktop\github\Bootcamp\Bootcamp\Source\Embedded Codes\LED_DRIVER\project.uvprojx
+Project File Date:  02/26/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+compiling main.c...
+compiling init.c...
+compiling led_driver.c...
+compiling deinit.c...
+compiling handler.c...
+compiling hal_tick.c...
+config.c(1): warning: In file included from...
+./main.h(6): warning: In file included from...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(257): warning: In file included from...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F745ZGTx\stm32f7xx_hal_conf.h(396): warning: In file included from...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_cortex.h(53): warning: padding struct 'MPU_Region_InitTypeDef' with 2 bytes to align 'BaseAddress' [-Wpadded]
+   53 |   uint32_t               BaseAddress;           /*!< Specifies the base address of the region to protect.                           */
+      |                          ^
+config.c(70): warning: no previous prototype for function 'CPU_CACHE_Enable' [-Wmissing-prototypes]
+   70 | void CPU_CACHE_Enable(void)
+      |      ^
+config.c(70): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   70 | void CPU_CACHE_Enable(void)
+      | ^
+      | static 
+2 warnings generated.
+compiling config.c...
+compiling stm32f7xx_hal.c...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c(216): warning: function 'HAL_NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+  216 | {
+      | ^
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c(82): warning: In file included from...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F745ZGTx\stm32f7xx_hal_conf.h(396): warning: In file included from...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc\stm32f7xx_hal_cortex.h(53): warning: padding struct 'MPU_Region_InitTypeDef' with 2 bytes to align 'BaseAddress' [-Wpadded]
+   53 |   uint32_t               BaseAddress;           /*!< Specifies the base address of the region to protect.                           */
+      |                          ^
+2 warnings generated.
+compiling stm32f7xx_hal_cortex.c...
+compiling stm32f7xx_hal_pwr_ex.c...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c(386): warning: unused parameter 'Regulator' [-Wunused-parameter]
+  386 | void HAL_PWR_EnterSLEEPMode(uint32_t Regulator, uint8_t SLEEPEntry)
+      |                                      ^
+1 warning generated.
+compiling stm32f7xx_hal_pwr.c...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(222): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  222 |         temp = GPIOx->AFR[position >> 3];
+      |                ^~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(225): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  225 |         GPIOx->AFR[position >> 3] = temp;
+      |         ^~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(241): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  241 |         temp = SYSCFG->EXTICR[position >> 2];
+      |                ^~~~~~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f745xx.h(1286): note: expanded from macro 'SYSCFG'
+ 1286 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(244): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  244 |         SYSCFG->EXTICR[position >> 2] = temp;
+      |         ^~~~~~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f745xx.h(1286): note: expanded from macro 'SYSCFG'
+ 1286 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(312): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  312 |       tmp = SYSCFG->EXTICR[position >> 2];
+      |             ^~~~~~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f745xx.h(1286): note: expanded from macro 'SYSCFG'
+ 1286 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(326): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  326 |         SYSCFG->EXTICR[position >> 2] &= ~tmp;
+      |         ^~~~~~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f745xx.h(1286): note: expanded from macro 'SYSCFG'
+ 1286 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c(333): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  333 |       GPIOx->AFR[position >> 3] &= ~((uint32_t)0xF << ((uint32_t)(position & (uint32_t)0x07) * 4)) ;
+      |       ^~~~~~~~~~
+7 warnings generated.
+compiling stm32f7xx_hal_gpio.c...
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c(850): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  850 |   SystemCoreClock = HAL_RCC_GetSysClockFreq() >> AHBPrescTable[(RCC->CFGR & RCC_CFGR_HPRE) >> RCC_CFGR_HPRE_Pos];
+      |                                                  ^~~~~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c(1069): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+ 1069 |   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE1) >> RCC_CFGR_PPRE1_Pos]);
+      |                                    ^~~~~~~~~~~~~
+C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c(1081): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+ 1081 |   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE2) >> RCC_CFGR_PPRE2_Pos]);
+      |                                    ^~~~~~~~~~~~~
+3 warnings generated.
+compiling stm32f7xx_hal_rcc.c...
+compiling stm32f7xx_hal_rcc_ex.c...
+RTE/Device/STM32F745ZGTx/system_stm32f7xx.c(243): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  243 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32f7xx.c...
+linking...
+Program Size: Code=5500 RO-data=504 RW-data=12 ZI-data=1644  
+FromELF: creating hex file...
+".\Objects\project.axf" - 0 Error(s), 16 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F7xx_DFP.2.16.0.pack
+                Keil::STM32F7xx_DFP@2.16.0
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Classic Version: 1.3.0
+   * Component: Common Version: 1.3.0
+   * Component: Cortex Version: 1.3.0
+   * Component: GPIO Version: 1.3.0
+   * Component: PWR Version: 1.3.0
+   * Component: RCC Version: 1.3.0
+   * Component: Startup Version: 1.2.5
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F745ZGTx
+  ./RTE/_Target_1
+  C:/Users/abdul/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+  C:/Users/abdul/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework(API)@1.0.0
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:STM32Cube Framework:Classic@1.3.0
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Include file:  MDK/Templates_LL/Inc/main.h
+      Include file:  MDK/Templates/Inc/stm32f7xx_hal_conf.h
+      Include file:  MDK/Templates/Inc/stm32f7xx_it.h
+      Include file:  MDK/Templates/Inc/main.h
+      Source file:   MDK/Templates_LL/Src/main.c
+      Source file:   MDK/Templates/Src/main.c
+      Source file:   MDK/Templates/Src/stm32f7xx_hal_msp.c
+      Source file:   MDK/Templates/Src/stm32f7xx_it.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common@1.3.0
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
+      Include file:  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex@1.3.0
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO@1.3.0
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR@1.3.0
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC@1.3.0
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
+      Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
+
+   * Component: Keil::Device:Startup@1.2.5
+      Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f745xx.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

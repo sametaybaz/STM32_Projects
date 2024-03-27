@@ -1,0 +1,26 @@
+--cpu Cortex-M7.fp.sp
+".\objects\led_driver.o"
+".\objects\main.o"
+".\objects\relay_driver.o"
+".\objects\config.o"
+".\objects\deinit.o"
+".\objects\hal_tick.o"
+".\objects\handler.o"
+".\objects\init.o"
+"..\..\..\..\..\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.8.0\Library\ARM\RTX_V7MF.lib"
+".\objects\rtx_lib.o"
+".\objects\os_systick.o"
+".\objects\rtx_config.o"
+".\objects\stm32f7xx_hal.o"
+".\objects\stm32f7xx_hal_cortex.o"
+".\objects\stm32f7xx_hal_gpio.o"
+".\objects\stm32f7xx_hal_pwr.o"
+".\objects\stm32f7xx_hal_pwr_ex.o"
+".\objects\stm32f7xx_hal_rcc.o"
+".\objects\stm32f7xx_hal_rcc_ex.o"
+".\objects\startup_stm32f745xx.o"
+".\objects\system_stm32f7xx.o"
+--strict --scatter ".\Objects\project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\project.map" -o .\Objects\project.axf
